@@ -1,4 +1,4 @@
 
-##My Portfolio<br />
-Link: " https://lavenababu.github.io/ "<br />
-Note: The website is still in progress
+### My Portfolio<br />
+Website link: https://lavenababu.github.io/ <br />
+Note: It is still in progress
