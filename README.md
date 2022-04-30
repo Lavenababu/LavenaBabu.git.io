@@ -1,4 +1,3 @@
 
-My Portfolio that i have created<br />
-Link : " https://lavenababu.github.io/ "<br />
-Note: It is still in Progress
+]My Portfolio](https://lavenababu.github.io/)<br />
+Note: The website is still in progress
