@@ -28,7 +28,7 @@
 }
 .navbar.sticky{
     padding: 0px 15px; 
-    background-color: #2a5d68;
+    background-color: #7dbbb9;
 }
 .navbar .max-width{
     display: flex;
@@ -41,7 +41,7 @@
     font-weight: 600;
 }
 .navbar .logo a span{
-    color: #2a5d68;
+    color: #7dbbb9;
     transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span{
@@ -59,7 +59,7 @@
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-    color: #2a5d68;
+    color: #7dbbb9;
 }
 .navbar.sticky .menu li a:hover{
     color: #ffffff;
@@ -100,18 +100,15 @@
     margin: 5px 0;
 }
 .home .home-content .text-3 span{
-    color: #2a5d68;
+    color: #7dbbb9;
     font-weight: 500;
 }
 
-/* about section styling */
+/* all similar content styling */
 section{
     padding: 100px;
 }
-.about{
-    font-family: 'Trebuchet MS', sans-serif;
-}
-.about .title{
+section .title{
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -120,28 +117,38 @@ section{
     padding-bottom: 20px;
     font-family: 'Libre Baskerville', serif;
 }
-.about .title::before{
+section .title::before{
     content: "";
     position: absolute;
     bottom: 0px;
     left: 50%;
-    width: 180px;
+    width: 200px;
     height: 3px;
     background: #111;
     transform: translateX(-50%);
 }
-.about .title::after{
-    content: "who i am";
+section .title::after{
     position: absolute;
     bottom: -7px;
     left: 50%;
     font-size: 20px;
-    color: #2a5d68;
+    /* color: #2a5d68; */
     padding: 5px;
     background: #fff;
     transform: translateX(-50%);
 }
-.about .about-content{
+
+
+/* about section styling */
+.about, .projects{
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.about .title::after{
+    content: "who i am";
+    color: #2a5d68;
+}
+.about .about-content,
+.projects .project-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -151,8 +158,8 @@ section{
     width: 45%;
 }
 .about .about-content .left img{
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     object-fit: cover;
     border-radius: 6px;
 }
@@ -186,8 +193,50 @@ section{
     color: #2a5d68;
     background: none;
 }
-
-
+/* project section styling */
+.projects{
+    color: #fff;
+    background: #48494B;
+}
+.projects .title::before{
+    background: #fff;
+}
+.projects .title::after{
+    background: #48494B;
+    content: "what i've done";
+    color: #7dbbb9;
+}
+.projects .project-content .card{
+    width: calc(33% - 20px);
+    background: #68696d;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.projects .project-content .card:hover{
+    background: #7dbbb9;
+}
+.projects .project-content .card .box{
+    transition: all 0.3s ease;
+}
+.projects .project-content .card:hover .box{
+    transform: scale(1.05)
+}
+.projects .project-content .card i{
+    font-size: 50px;
+    color: #7dbbb9;
+    transition: color 0.3s ease;
+}
+.projects .project-content .card:hover i{
+    color: #fff;
+}
+.projects .project-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
 
 
 
@@ -203,8 +252,8 @@ section{
 
 @media (max-width: 1104px){
     .about .about-content .left img{
-        height: 350px;
-        width: 350px;
+        height: 250px;
+        width: 250px;
     }
 }
 @media (max-width: 991px){
@@ -248,11 +297,25 @@ section{
     .home .home-content .text-3{
         font-size: 35px;
     }
-    .about .about-content .column{
-        width: 50%;
-    }
     .max-width{
         max-width: 800px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px0
+        ;
+    }
+    .about .about-content .right{
+        padding-top: 50px;
+        flex: 100%;
+    }
+    .projects .project-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
     }
 }
 @media (max-width: 690px){
@@ -264,6 +327,9 @@ section{
     }
     .home .home-content .text-3{
         font-size: 32px;
+    }
+    .projects .project-content .card{
+        width: 100%;
     }
 }
 @media (max-width: 500px){
