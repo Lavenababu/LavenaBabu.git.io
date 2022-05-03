@@ -108,6 +108,17 @@
 section{
     padding: 100px;
 }
+.about, .projects, .skills{
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.about .about-content,
+.projects .project-content,
+.skills .skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
 section .title{
     position: relative;
     text-align: center;
@@ -140,19 +151,9 @@ section .title::after{
 
 
 /* about section styling */
-.about, .projects{
-    font-family: 'Trebuchet MS', sans-serif;
-}
 .about .title::after{
     content: "who i am";
     color: #2a5d68;
-}
-.about .about-content,
-.projects .project-content{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
 }
 .about .about-content .left{
     width: 45%;
@@ -236,6 +237,80 @@ section .title::after{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+}
+/* skill section styling */
+.skills .title::after{
+    content: "what i know";
+    color: #2a5d68;
+}
+.skills .skills-content .column{
+    width: calc(50% - 30px); 
+}
+.skills .skills-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left p{
+    text-align: justify;
+}
+.skills .skills-content .left a{
+    display: inline-block;
+    background: #2a5d68;
+    color: #fff;
+    font-size: 18px;  
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #2a5d68;
+    transition: all 0.3s ease;
+}
+.skills .skills-content .left a:hover{
+    color: #2a5d68;
+    background: none;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #2a5d68;
+}
+.skills .skills-content .right .html::before{
+    width: 90%;
+}
+.skills .skills-content .right .css::before{
+    width: 70%;
+}
+.skills .skills-content .right .java::before{
+    width: 50%;
+}
+.skills .skills-content .right .python::before{
+    width: 30%;
+}
+.skills .skills-content .right .mysql::before{
+    width: 80%;
 }
 
 
@@ -328,7 +403,8 @@ section .title::after{
     .home .home-content .text-3{
         font-size: 32px;
     }
-    .projects .project-content .card{
+    .projects .project-content .card,
+    .skills .skills-content .column{
         width: 100%;
     }
 }
