@@ -64,7 +64,9 @@
 .navbar.sticky .menu li a:hover{
     color: #ffffff;
 }
+
 /* menu button styling */
+
 .menu-btn{
     color: #ffffff;
     font-size: 23px;
@@ -73,6 +75,7 @@
 }
 
 /* Home section styling */
+
 .home{
     display: flex;
     background: url(../Interior/Assets/black_banner.jpg) no-repeat center;
@@ -105,15 +108,17 @@
 }
 
 /* all similar content styling */
+
 section{
     padding: 100px;
 }
-.about, .projects, .skills{
+.about, .projects, .skills, .contact{
     font-family: 'Trebuchet MS', sans-serif;
 }
 .about .about-content,
 .projects .project-content,
-.skills .skills-content{
+.skills .skills-content,
+.contact .contact-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -238,7 +243,9 @@ section .title::after{
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
+
 /* skill section styling */
+
 .skills .title::after{
     content: "what i know";
     color: #2a5d68;
@@ -312,6 +319,24 @@ section .title::after{
 .skills .skills-content .right .mysql::before{
     width: 80%;
 }
+
+/* contact section styling */
+
+.contact .title::after{
+    content: "get in touch";
+    color: #2a5d68;
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -392,6 +417,10 @@ section .title::after{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
+    .skills .skills-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
 }
 @media (max-width: 690px){
     .max-width{
@@ -403,8 +432,7 @@ section .title::after{
     .home .home-content .text-3{
         font-size: 32px;
     }
-    .projects .project-content .card,
-    .skills .skills-content .column{
+    .projects .project-content .card{
         width: 100%;
     }
 }
